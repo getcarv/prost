@@ -31,8 +31,8 @@ pub enum UnknownField {
 
 impl UnknownFieldList {
     /// Creates an empty [UnknownFieldList].
-    pub fn new() -> Self {
-        Default::default()
+    pub const fn new() -> Self {
+        Self { fields: BTreeMap::new() }
     }
 
     /// Gets an iterator over the fields contained in this set.
